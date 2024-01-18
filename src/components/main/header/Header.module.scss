@@ -1,0 +1,78 @@
+.header {
+  position: relative;
+  background-color: $headerBG;
+  color: $textWhite;
+  font-family: 'ComicBold';
+  font-size: 24px;
+  &::after {
+    content: '';
+    width: 100%;
+    height: 112px;
+    background: url('../../../../public/images/header_bottom.png');
+    position: absolute;
+    bottom: -112px;
+    left: 0;
+  }
+}
+
+.contentWrapper {
+  padding: 10px;
+  @extend%aligncenter;
+  justify-content: space-between;
+}
+
+// burger
+.burgerButton {
+  position: absolute;
+  top: 18%;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10000;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: $white;
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    &:first-child {
+      transform: rotate(0);
+    }
+
+    &:nth-child(2) {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(0);
+    }
+  }
+
+  &.closeBurgerMenu div:first-child {
+    transform: rotate(45deg);
+  }
+  &.closeBurgerMenu div:nth-child(2) {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  &.closeBurgerMenu div:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
