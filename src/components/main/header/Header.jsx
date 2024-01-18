@@ -21,7 +21,6 @@ const Header = () => {
         <div className={styles.contentWrapper}>
           <Logo />
           {!isDesktop ? (
-        
             <button
               className={clsx(
                 styles.burgerButton,
@@ -34,7 +33,7 @@ const Header = () => {
               <div />
             </button>
           ) : (
-            <Navigation />
+            <Navigation toggleBurgerMenu={toggleBurgerMenu} />
           )}
           <BurgerMenu
             toggleBurgerMenu={toggleBurgerMenu}

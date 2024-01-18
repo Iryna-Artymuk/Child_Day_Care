@@ -36,20 +36,15 @@ main {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  margin-top: 83px;
+  @include tablet {
+    margin-top: 101px;
+  }
 }
 
 header,
 footer {
   width: 100vw;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-
-  z-index: 9998;
 }
 
 h1,

@@ -1,10 +1,10 @@
 import { HashLink } from 'react-router-hash-link';
 import styles from './Navigation.module.scss';
 
-const Navigation = () => {
+const Navigation = ({ toggleBurgerMenu }) => {
   return (
     <nav className={styles.nav}>
-      <ul className={styles.navList}>
+      <ul className={styles.navList} onClick={() => toggleBurgerMenu()}>
         <li>
           <HashLink
             className={styles.navListLink}
