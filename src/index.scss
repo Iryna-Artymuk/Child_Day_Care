@@ -36,15 +36,6 @@ main {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-
-  margin-top: 79px;
-
-  @media screen and (min-width: 768px) {
-    margin-top: 110px;
-  }
-  @media screen and (min-width: 1240px) {
-    margin-top: 134px;
-  }
 }
 
 header,
