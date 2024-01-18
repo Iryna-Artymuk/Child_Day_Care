@@ -1,8 +1,7 @@
 import Container from '../../Container/Container';
 import styles from './Hero.module.scss';
 
-import img1_hero from '@/assets/images/hero/img1_hero.png';
-import img2_hero from '@/assets/images/hero/img2_hero.png';
+
 import bear2_hero from '@/assets/images/hero/bear2_hero.png';
 import paw_patrol from '@/assets/images/hero/paw_patrol.png';
 import { useMediaQuery } from 'react-responsive';
