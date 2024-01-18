@@ -6,7 +6,7 @@
   right: 0;
   z-index: 999;
 
-  width: 50vw;
+  width: 65vw;
   height: 100vh;
 
   @extend%aligncenter;
@@ -15,6 +15,10 @@
 
   transform: translateX(0%);
   transition: transform 0.3s ease-in-out;
+
+  @include desktop {
+    width: 65vw;
+  }
 }
 
 .burgerMenuWrapper.hidden {

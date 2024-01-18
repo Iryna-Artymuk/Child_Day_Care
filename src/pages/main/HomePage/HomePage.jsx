@@ -1,16 +1,5 @@
 const HomePage = () => {
-  return (
-    <>
-      <img
-        src="./public/icons/favicon.svg
-    "
-        alt=""
-        width={200}
-        height={200}
-      />
-      hello world
-    </>
-  );
+  return <>content</>;
 };
 
 export default HomePage;

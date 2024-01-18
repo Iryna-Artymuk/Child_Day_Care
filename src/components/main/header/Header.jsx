@@ -21,11 +21,7 @@ const Header = () => {
         <div className={styles.contentWrapper}>
           <Logo />
           {!isDesktop ? (
-            // <Button type="button" burgerButton onClick={toggleBurgerMenu}>
-            //   <svg width={50} height={50}>
-            //     <use href={`${sprite}#${'burger_menu'}`} />
-            //   </svg>
-            // </Button>
+        
             <button
               className={clsx(
                 styles.burgerButton,

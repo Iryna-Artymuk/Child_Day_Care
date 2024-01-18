@@ -7,11 +7,27 @@
   &::after {
     content: '';
     width: 100%;
-    height: 112px;
-    background: url('../../../../public/images/header_bottom.png');
+    height: 93px;
+    background: url('../../../../public/images/header_bottomMobile.png');
     position: absolute;
-    bottom: -112px;
+    bottom: -92px;
     left: 0;
+  }
+  @include tablet {
+    &::after {
+      height: 112px;
+      background: url('../../../../public/images/header_bottomDesktop.png');
+      position: absolute;
+      bottom: -112px;
+    }
+  }
+  @include tablet {
+    &::after {
+      height: 137px;
+      background: url('../../../../public/images/header_bottomDesktop.png');
+      position: absolute;
+      bottom: -135px;
+    }
   }
 }
 
