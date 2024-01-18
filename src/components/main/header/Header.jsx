@@ -5,12 +5,11 @@ import { useState } from 'react';
 
 import Logo from '@/components/logo/Logo';
 import Navigation from '@/components/nav/Navigation';
-import Button from '@/components/Button/Button';
+
 import BurgerMenu from '@/components/burgerMenu/BurgerMenu';
 
 import styles from './Header.module.scss';
-import sprite from '@/assets/icons/sprite.svg';
-import header_bottom from '@/assets/images/header_bottom.png';
+
 import clsx from 'clsx';
 const Header = () => {
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
