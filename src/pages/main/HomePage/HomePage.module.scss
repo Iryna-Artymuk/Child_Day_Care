@@ -1,0 +1,708 @@
+///----section hero---
+.hero {
+  @extend%aligncenter;
+
+  @include tablet {
+  }
+  @include desktop {
+    flex-direction: row;
+  }
+}
+.contentWrapper {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  @extend%aligncenter;
+  flex-direction: column;
+  gap: 10px;
+
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 24px;
+    padding-bottom: 60px;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    gap: 60px;
+    padding-top: 50px;
+    padding-bottom: 120px;
+  }
+}
+.heroImage {
+  position: relative;
+
+  width: 296px;
+  height: 360px;
+  border-radius: 30px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include tablet {
+    width: 342px;
+    height: 430px;
+  }
+  @include desktop {
+    border-radius: 60px;
+    width: 540px;
+    height: 680px;
+  }
+}
+.about {
+  @extend%aligncenter;
+  flex-direction: column;
+  width: 296px;
+
+  @include tablet {
+    width: 342px;
+    margin-top: 109px;
+  }
+  @include desktop {
+    margin-top: 79px;
+    width: 640px;
+  }
+}
+.aboutName {
+  font-family: 'Script';
+  font-size: 28px;
+  font-style: italic;
+  text-align: center;
+  color: $red;
+  margin-bottom: 4px;
+  @include tablet {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  @include desktop {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+}
+
+.aboutJob {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 4px;
+  @include tablet {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  @include desktop {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+}
+.aboutContent {
+  font-family: 'Lora', serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.25;
+  letter-spacing: 0em;
+  text-align: center;
+
+  @include tablet {
+    font-size: 14px;
+    line-height: 1.28;
+  }
+  @include desktop {
+    font-size: 24px;
+
+    line-height: 1.3;
+    margin-bottom: 54px;
+  }
+}
+
+.quote {
+  position: absolute;
+  z-index: 100;
+  @extend%aligncenter;
+  bottom: -18px;
+  left: 86px;
+  width: 190px;
+  height: 72px;
+  padding: 9.5px 9px;
+  background: $quoteBG;
+  border-radius: 15px;
+
+  @include tablet {
+    width: 254px;
+    height: 93px;
+    padding: 24px;
+    bottom: 35px;
+    left: 281px;
+
+    border-radius: 30px;
+  }
+
+  @include desktop {
+    width: 434px;
+    height: 170px;
+    padding: 48px 34.5px;
+    bottom: 45px;
+    left: 464px;
+  }
+
+  p {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.28;
+    letter-spacing: 0em;
+    text-align: left;
+
+    @include desktop {
+      font-size: 24px;
+    }
+  }
+}
+
+///----section WhyMe---
+
+.whyMe {
+  width: 100vw;
+  background: $sectionBG;
+}
+
+.whyMe_wrapper {
+  @extend%aligncenter;
+  flex-direction: column;
+  gap: 14px;
+
+  @include tablet {
+    flex-direction: row;
+
+    gap: 20px;
+  }
+
+  @include desktop {
+    gap: 71px;
+  }
+}
+.whyMe_contentWrapper {
+  @extend%aligncenter;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @include tablet {
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-bottom: 60px;
+    gap: 20px;
+  }
+}
+
+.whyMe_textWrapper {
+  @extend%aligncenter;
+  flex-direction: column;
+  gap: 14px;
+  h2 {
+    text-align: center;
+  }
+
+  @include tablet {
+    gap: 24px;
+    h2 {
+      text-align: left;
+    }
+  }
+}
+.whyMe_img {
+  width: 138px;
+  height: 205px;
+  border-radius: 15px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include tablet {
+    width: 342px;
+    height: 430px;
+    border-radius: 30px;
+    background-size: cover;
+  }
+  @include desktop {
+    width: 540px;
+    height: 680px;
+  }
+}
+.whyMe_text {
+  width: 150px;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+  @include tablet {
+    width: 342px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+  }
+  @include desktop {
+    width: 648px;
+    font-size: 24px;
+  }
+}
+
+.whyMe_secondText {
+  width: 296px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  text-align: left;
+}
+
+.whyMe_imgWrapper {
+  @extend%aligncenter;
+  gap: 8px;
+}
+
+////---My principles ---
+
+.myPrinciples_ContentWrapper {
+  width: 100%;
+  @extend%aligncenter;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media screen and (max-width: 768px) {
+    gap: 4px;
+  }
+  @include tablet {
+    flex-direction: row-reverse;
+    gap: 10px;
+    padding-top: 0px;
+    padding-bottom: 60px;
+  }
+  @include desktop {
+    gap: 50px;
+    padding-bottom: 120px;
+  }
+}
+//  myPrinciplesImgWrapper mobile only
+.myPrinciplesImgWrapper {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 16px;
+  h2 {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    font-size: 14px;
+    text-align: left;
+  }
+}
+.myPrinciplesImg {
+  width: 138px;
+  height: 205px;
+  border-radius: 15px;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include tablet {
+    width: 342px;
+    height: 430px;
+    border-radius: 30px;
+    background-size: cover;
+  }
+  @include desktop {
+    width: 540px;
+    height: 680px;
+  }
+}
+.myPrinciples_ListWrapper {
+  h2 {
+    margin-bottom: 16px;
+  }
+}
+.myPrinciples_List1 {
+  width: 142px;
+  @extend%aligncenter;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 4px;
+  height: 100%;
+  font-size: 10px;
+  line-height: 1.5;
+  @include tablet {
+    font-size: 14px;
+    gap: 8px;
+  }
+  @include desktop {
+    gap: 24px;
+  }
+}
+.myPrinciples_List2 {
+  width: 296px;
+  @extend%aligncenter;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 4px;
+  height: 100%;
+  font-size: 10px;
+  line-height: 1.5;
+
+  p {
+    width: 280px;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  @include tablet {
+    font-size: 14px;
+    gap: 8px;
+  }
+  @include desktop {
+    gap: 24px;
+  }
+}
+.myPrinciples_List_Item {
+  @extend%aligncenter;
+  align-items: flex-start;
+  gap: 5px;
+  @include tablet {
+    gap: 7px;
+  }
+  @include desktop {
+    gap: 15px;
+  }
+}
+
+.myPrinciples_List_ItemText {
+  width: 131px;
+  font-size: 10px;
+  line-height: 1.5;
+
+  @include tablet {
+    width: 319px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  @include desktop {
+    width: 646px;
+    font-size: 18px;
+    line-height: 1.77;
+  }
+}
+
+.myPrinciples_List_Item::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $red;
+  margin-top: 4px;
+  @include tablet {
+    width: 7px;
+    height: 7px;
+  }
+  @include desktop {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+//---WORK AREA
+.workAreas_ContentWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  gap: 14px;
+  h2 {
+    text-align: center;
+  }
+  @include tablet {
+    gap: 24px;
+    padding-bottom: 60px;
+  }
+  @include desktop {
+    gap: 40px;
+    padding-bottom: 120px;
+  }
+}
+
+.workAreas_List {
+  @extend%aligncenter;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  @include tablet {
+    gap: 20px;
+  }
+  @include desktop {
+    gap: 40px;
+  }
+}
+.workAreas_List .workAreas_List_Item:nth-child(2) {
+  @include tablet {
+    margin-left: 85px;
+  }
+  @include desktop {
+    margin-left: 108px;
+  }
+}
+
+.workAreas_List_Item {
+  @extend%aligncenter;
+  width: 100%;
+  align-items: flex-start;
+  gap: 8px;
+
+  @include tablet {
+    gap: 20px;
+  }
+  @include desktop {
+    gap: 60px;
+  }
+}
+.workAreas_List_Item span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  @extend%aligncenter;
+  background: $arrowBG;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+  @include tablet {
+    width: 80px;
+    height: 80px;
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
+
+.workAreas_List_Item_contentBox {
+  @extend%aligncenter;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 9px;
+  @include tablet {
+    gap: 14px;
+  }
+}
+.workAreas_List_ItemTitel {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0em;
+  @include tablet {
+    font-size: 24px;
+  }
+  @include desktop {
+    font-size: 32px;
+  }
+}
+.workAreas_List_ItemText {
+  width: 248px;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0em;
+
+  @include tablet {
+    width: 499px;
+    font-size: 18px;
+    line-height: 1.33;
+  }
+  @include desktop {
+    width: 650px;
+    font-size: 24px;
+  }
+}
+
+.workAreas_subList {
+  @extend%aligncenter;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  @include tablet {
+    gap: 20px;
+  }
+  @include desktop {
+    gap: 40px;
+  }
+}
+
+.workAreas_subList_item {
+  @extend%aligncenter;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 5px;
+  @include tablet {
+    gap: 7px;
+  }
+  @include desktop {
+    gap: 15px;
+  }
+}
+.workAreas_subList_item::before {
+  content: '';
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $red;
+  margin-top: 4px;
+  @include tablet {
+    width: 7px;
+    height: 7px;
+  }
+  @include desktop {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.workAreas_subList_itemText {
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.5;
+
+  @include tablet {
+    font-size: 18px;
+    line-height: 1.33;
+  }
+  @include desktop {
+    font-size: 24px;
+  }
+}
+//-----FEEDBACK SECTION ----
+
+.feedbakSwiperWrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 58px;
+
+  @include desktop {
+    padding-top: 92px;
+    width: 1130px;
+  }
+}
+
+.feedBack_contentWrapper {
+  position: relative;
+  @extend%aligncenter;
+  flex-direction: column;
+  gap: 12px;
+
+  padding-bottom: 40px;
+
+  h2 {
+    text-align: center;
+  }
+
+  @include tablet {
+    gap: 16px;
+
+    padding-bottom: 60px;
+  }
+  @include desktop {
+    gap: 16px;
+
+    padding-bottom: 120px;
+  }
+}
+
+.thanksMessage {
+  font-family: 'Script';
+  font-size: 28px;
+  font-style: italic;
+  letter-spacing: 0em;
+  text-align: center;
+  color: $red;
+}
+
+// ---BLOG SECTION---
+
+.blog_swiperwrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 58px;
+
+  @include desktop {
+    padding-top: 92px;
+    width: 1130px;
+  }
+}
+.blog_contentWrapper {
+  @extend%aligncenter;
+  flex-direction: column;
+
+  gap: 12px;
+
+  padding-bottom: 40px;
+
+  h2 {
+    text-align: center;
+  }
+
+  @include tablet {
+    gap: 16px;
+
+    padding-bottom: 60px;
+  }
+}
+.blog_Link {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  z-index: 100;
+  height: 32px;
+  @extend%aligncenter;
+  border-radius: 15px;
+  background-color: $buttonBG;
+  color: $buttonTextColor;
+  margin-left: auto;
+  font-size: 12px;
+  padding: 8.5px 19.5px;
+  @include tablet {
+    width: 241px;
+    height: 42px;
+    font-size: 16px;
+  }
+  &:hover,
+  &:focus {
+    background-color: $buttonBG;
+    color: $buttonTextColorHover;
+  }
+}
+
+.writemeLink {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  @extend%aligncenter;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: $writeMeLinkBG;
+  font-size: 24px;
+  line-height: 29px;
+  color: $navLinkColor;
+
+  &:hover p {
+    border-bottom: 1px solid $navLinkColor;
+  }
+}

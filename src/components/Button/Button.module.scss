@@ -1,0 +1,10 @@
+.button {
+  @extend%aligncenter;
+  width: 40px;
+  height: 40px;
+}
+.burgerButton {
+  svg {
+    fill: $white;
+  }
+}

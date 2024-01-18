@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'ComicBold';
+  src: url('./fonts/Comic_Sans_MS_Bold.ttf') format('truetype');
+
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Comic';
+  src: url('./fonts/Comic_Sans_MS.ttf') format('truetype');
+  font-weight: 400; /* Adjust the font-weight accordingly */
+  font-style: italic;
+  font-display: swap;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+  max-width: 100%;
+  font-family: 'Comic';
+
+  font-size: 18px;
+
+  overflow-x: hidden;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  margin-top: 68px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 110px;
+  }
+  @media screen and (min-width: 1240px) {
+    margin-top: 134px;
+  }
+}
+
+header,
+footer {
+  width: 100vw;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 9998;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  outline: none;
+}
