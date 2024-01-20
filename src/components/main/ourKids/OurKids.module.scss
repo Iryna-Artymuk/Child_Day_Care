@@ -16,7 +16,9 @@
   }
 }
 .kidsList {
+  width: 100%;
   @extend%aligncenter;
+  flex-wrap: wrap;
   gap: 10px;
   li img {
     border-radius: 8px;
