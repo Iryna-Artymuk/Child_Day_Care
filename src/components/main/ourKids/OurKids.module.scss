@@ -47,31 +47,11 @@
     .hobby {
       width: 265px;
       height: 80px;
-      overflow-y: auto;
       text-align: center;
+      overflow-y: auto;
       overflow-wrap: break-word;
-      &::-webkit-scrollbar {
-        z-index: 0;
-        width: 0.8rem;
-      }
-      &::-webkit-scrollbar-track {
-        background-color: $scroll;
-        border-radius: 8px;
-        margin-bottom: 0.5rem;
-      }
-      &::-webkit-scrollbar-thumb {
-        background-color: $scrollBG;
-        border-radius: 0.3rem;
-        border: 1px solid $scrollBG;
-        height: 0.5rem;
-        cursor: pointer;
-      }
-      &::-webkit-scrollbar-thumb:hover {
-        background-color: $scrollBGHover;
-        border: 1px solid $scrollBGHover;
-        cursor: pointer;
-      }
     }
+
     .name {
       font-size: 24px;
     }
@@ -88,7 +68,6 @@
   width: 100%;
   height: 100%;
   img {
-    z-index: 10;
     width: 100%;
     height: 100%;
     object-fit: cover;
