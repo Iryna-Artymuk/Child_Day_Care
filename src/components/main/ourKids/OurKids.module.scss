@@ -51,6 +51,7 @@
       text-align: center;
       overflow-wrap: break-word;
       &::-webkit-scrollbar {
+        z-index: 0;
         width: 0.8rem;
       }
       &::-webkit-scrollbar-track {
