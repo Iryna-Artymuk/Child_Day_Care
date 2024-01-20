@@ -14,7 +14,7 @@ const Hero = () => {
           <div>
             <h1 className={styles.heroTitlte}>
               Чорнобаївський заклад дошкільної освіти &quot;Вишенька&quot;
-              <br />2 молодша група &quot; Малинка &quot;
+              <br />2 молодша група &quot;Малинка&quot;
             </h1>
           </div>
           {!isDesktop && (
