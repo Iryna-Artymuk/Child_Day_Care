@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 
+import styles from './OurKids.module.scss';
 const CardStyle = {
   borderRadius: '12px',
   border: '4px solid #FFC909',
   background: '#710A85',
   width: '305px',
   height: '422px',
-  cursor: ' pointer',
+  cursor: 'pointer',
+  padding: '0px',
 };
 const Card = ({ childInfo }) => {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -16,12 +18,13 @@ const Card = ({ childInfo }) => {
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
       <div
         style={CardStyle}
-        // className={styles.contentWrapper}
+        className={styles.cardFront}
+        onClick={() => setIsFlipped(!isFlipped)}
         onMouseEnter={() => setIsFlipped(!isFlipped)}
-        // onMouseLeave={() => setIsFlipped(!isFlipped)}
+        onMouseLeave={() => setIsFlipped(!isFlipped)}
       >
-        <div>
-          <img src={childInfo.photo} width={200} height={200} alt="" />
+        <img src={childInfo.photo} alt="" />
+        <div className={styles.info}>
           <p>{childInfo.name}</p>
           <p>{childInfo.DOB}</p>
           <p>{childInfo.hobby}</p>
@@ -30,9 +33,10 @@ const Card = ({ childInfo }) => {
 
       <div
         style={CardStyle}
+        onClick={() => setIsFlipped(!isFlipped)}
+        className={styles.cardBack}
         onMouseEnter={() => setIsFlipped(!isFlipped)}
         onMouseLeave={() => setIsFlipped(!isFlipped)}
-        className="CardBack"
       >
         <img src={childInfo.photo} alt="" />
       </div>

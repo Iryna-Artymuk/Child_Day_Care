@@ -1,7 +1,7 @@
 export const kidsData = [
   {
     name: 'Артимук Аміра',
-    DOB: '05 червня 2012',
+    DOB: '05 травня 2020',
     hobby: 'Грає на піаніно',
     photo: 'images/default/default_girl.webp',
     sex: 'дівчинка',
@@ -57,7 +57,7 @@ export const kidsData = [
   },
   {
     name: 'Івко Богдан',
-    DOB: '20 червня 2010',
+    DOB: '22 січня 2020',
     hobby: 'Читання',
     photo: 'images/default/default_boy.webp',
     sex: 'хлопчик',
