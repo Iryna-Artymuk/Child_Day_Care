@@ -1,17 +1,24 @@
 import { HashLink } from 'react-router-hash-link';
 import styles from './Navigation.module.scss';
+import { useMediaQuery } from 'react-responsive';
 
 const Navigation = ({ toggleBurgerMenu }) => {
+  const isDesktop = useMediaQuery({ minWidth: 1240 });
   return (
     <nav className={styles.nav}>
-      <ul className={styles.navList} onClick={() => toggleBurgerMenu()}>
+      <ul
+        className={styles.navList}
+        onClick={() => {
+          if (!isDesktop) toggleBurgerMenu();
+        }}
+      >
         <li>
           <HashLink
             className={styles.navListLink}
             scroll={el =>
               el.scrollIntoView({
                 behavior: 'smooth',
-                block: 'end',
+                block: 'start',
               })
             }
             to="/#ourKids"

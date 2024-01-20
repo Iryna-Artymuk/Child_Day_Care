@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Container>
-        <div className={styles.contentWrapper}>
+        <div className={styles.header_contentWrapper}>
           <Logo />
           {!isDesktop ? (
             <button

@@ -20,14 +20,17 @@ const Card = ({ childInfo }) => {
         style={CardStyle}
         className={styles.cardFront}
         onClick={() => setIsFlipped(!isFlipped)}
-        onMouseEnter={() => setIsFlipped(!isFlipped)}
-        onMouseLeave={() => setIsFlipped(!isFlipped)}
       >
-        <img src={childInfo.photo} alt="" />
+        <img
+          src={childInfo.photoFront}
+          width="297px"
+          height="235px"
+          alt={`${childInfo.name} фото`}
+        />
         <div className={styles.info}>
-          <p>{childInfo.name}</p>
+          <p className={styles.name}>{childInfo.name}</p>
           <p>{childInfo.DOB}</p>
-          <p>{childInfo.hobby}</p>
+          <p className={styles.hobby}>{childInfo.hobby}</p>
         </div>
       </div>
 
@@ -35,10 +38,8 @@ const Card = ({ childInfo }) => {
         style={CardStyle}
         onClick={() => setIsFlipped(!isFlipped)}
         className={styles.cardBack}
-        onMouseEnter={() => setIsFlipped(!isFlipped)}
-        onMouseLeave={() => setIsFlipped(!isFlipped)}
       >
-        <img src={childInfo.photo} alt="" />
+        <img src={childInfo.photoBack} alt={`${childInfo.name} фото`} />
       </div>
     </ReactCardFlip>
   );

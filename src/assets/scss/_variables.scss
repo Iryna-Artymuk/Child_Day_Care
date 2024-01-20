@@ -3,6 +3,13 @@ $accent: #710a85;
 $headerBG: #9c29b2;
 
 $heroBG: #ffc909;
+$galleryBG: #ffe7c0;
+$galleryGradient: linear-gradient(
+  183deg,
+  rgba(255, 240, 229, 1) 57%,
+  rgba(255, 231, 192, 1) 100%
+);
+
 $burgerMenuBG: #ffc909;
 $navLinkHoverMobile: #fff;
 $navLinkColorMobile: #710a85;
@@ -14,3 +21,7 @@ $textWhite: #fff;
 $textpurple: #710a85;
 $titleColor: #2e0336;
 $white: #fff;
+
+$scroll: #ffc909;
+$scrollBG: #9c29b2;
+$scrollBGHover: #fff;
