@@ -1,18 +1,30 @@
+// @font-face {
+//   font-family: 'ComicBold';
+//   src: url('./fonts/Comic_Sans_MS_Bold.ttf') format('truetype');
+
+//   font-style: italic;
+//   font-display: swap;
+// }
+// @font-face {
+//   font-family: 'Comic';
+//   src: url('./fonts/Comic_Sans_MS.ttf') format('truetype');
+//   font-weight: 400; /* Adjust the font-weight accordingly */
+//   font-style: italic;
+//   font-display: swap;
+// }
+
 @font-face {
   font-family: 'ComicBold';
   src: url('./fonts/Comic_Sans_MS_Bold.ttf') format('truetype');
-
-  font-style: italic;
-  font-display: swap;
+  font-weight: 400; /* Adjust the font-weight accordingly */
+  font-display: swap; /* Specify the font-display property */
 }
 @font-face {
   font-family: 'Comic';
   src: url('./fonts/Comic_Sans_MS.ttf') format('truetype');
   font-weight: 400; /* Adjust the font-weight accordingly */
-  font-style: italic;
-  font-display: swap;
+  font-display: swap; /* Specify the font-display property */
 }
-
 * {
   padding: 0;
   margin: 0;
