@@ -5,4 +5,13 @@ export const images = [
   { src: 'images/gallery/4.webp', alt: 'заняття з малювання' },
   { src: 'images/gallery/5.webp', alt: 'заняття з малювання' },
   { src: 'images/gallery/6.webp', alt: 'заняття з малювання' },
+  { src: 'images/gallery/8.webp', alt: 'свято осені' },
+  { src: 'images/gallery/9.webp', alt: 'свято осені' },
+  { src: 'images/gallery/10.webp', alt: 'свято осені' },
+  { src: 'images/gallery/11.webp', alt: 'свято осені' },
+  { src: 'images/gallery/12.webp', alt: 'свято осені' },
+  { src: 'images/gallery/12.webp', alt: 'свято осені' },
+  { src: 'images/gallery/14.webp', alt: 'свято осені' },
+  { src: 'images/gallery/15.webp', alt: 'свято осені' },
+  { src: 'images/gallery/16.webp', alt: 'свято осені' },
 ];

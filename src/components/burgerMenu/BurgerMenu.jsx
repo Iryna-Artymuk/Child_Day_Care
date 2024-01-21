@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import Button from '../Button/Button';
+
 import styles from './BurgerMenu.module.scss';
 import Navigation from '../nav/Navigation';
 

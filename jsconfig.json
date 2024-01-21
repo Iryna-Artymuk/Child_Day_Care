@@ -10,5 +10,5 @@
     "src/helpers",
     "src/pages/main/QualificationPage/QualificationPage.jsx",
     "SelectInput"
-  ]
+, "src/constants/data/schedule.js"  ]
 }

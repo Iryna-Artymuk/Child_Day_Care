@@ -28,28 +28,32 @@ const Gallery = () => {
       <Container>
         <div className="contentWrapper">
           <h2 className="title">Галерея</h2>
-          <div className={styles.lgReactElement}>
-            <LightGallery
-              onInit={onInit}
-              speed={500}
-              plugins={[
-                lgThumbnail,
-                lgZoom,
-                lgAutoplay,
-                lgFullscreen,
-                lgRotate,
-                lgShare,
-              ]}
-            >
-              {images.map((image, index) => {
-                return (
-                  <a href={image.src} key={index}>
-                    <img alt={image.alt} src={image.src} />
-                  </a>
-                );
-              })}
-            </LightGallery>
-          </div>
+
+          <LightGallery
+            elementClassNames={styles.imageGrid}
+            onInit={onInit}
+            speed={500}
+            // plugins={[
+            //   lgThumbnail,
+            //   lgZoom,
+            //   lgAutoplay,
+            //   lgFullscreen,
+            //   lgRotate,
+            //   lgShare,
+            // ]}
+          >
+            {images.map((image, index) => {
+              return (
+                <a
+                  href={image.src}
+                  key={index}
+                  className={styles.imageGridItem}
+                >
+                  <img alt={image.alt} src={image.src} />
+                </a>
+              );
+            })}
+          </LightGallery>
         </div>
       </Container>
     </section>

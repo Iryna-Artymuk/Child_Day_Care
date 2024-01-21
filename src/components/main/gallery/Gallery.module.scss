@@ -21,21 +21,38 @@
   .shapeTop .shapeFill {
     fill: #ffffff;
   }
-  img {
-    max-width: 100%;
-    display: block;
-    padding: 5px 0px;
-    border-radius: 20px;
-    transition: transform 0.2s;
-  }
-
-  img:hover {
-    filter: opacity(0.9);
-    transform: scale(1.01);
-  }
 }
 
-.lgReactElement {
-    column-count: 3;
-    column-gap: 10px;
+.imageGrid {
+  width: 100%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: minmax(50px, auto);
+
+  .imageGridItem {
+    display: block;
+
+    img {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .imageGridItem:nth-child(5n) {
+    grid-column-end: span 2;
+  }
+
+  @include tablet {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  @include desktop {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 }

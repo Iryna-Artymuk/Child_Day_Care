@@ -1,5 +1,6 @@
 import Container from '@/components/Container/Container';
 import styles from './Schedule.module.scss';
+import { schedule } from '@/constants/data/schedule';
 const Schedule = () => {
   return (
     <section id="schedule" className={styles.schedule}>
@@ -20,6 +21,15 @@ const Schedule = () => {
         <div className="contentWrapper">
           <div className={styles.innerWrapper}>
             <h2 className="title">Наш розклад</h2>
+            <div className={styles.schedule}>
+              {schedule.map((day, index) => (
+                <div key={index} className={styles.scheduleCard}>
+                  <h3>{day.day} </h3>
+                  <p>{day.time} </p>
+                  <p>{day.event} </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </Container>
