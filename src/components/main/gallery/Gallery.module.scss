@@ -1,5 +1,41 @@
 .gallery {
   width: 100%;
   background: $galleryBG;
-  background: $galleryGradient;
+  position: relative;
+  .shapeTop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .shapeTop svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 27px;
+  }
+
+  .shapeTop .shapeFill {
+    fill: #ffffff;
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    padding: 5px 0px;
+    border-radius: 20px;
+    transition: transform 0.2s;
+  }
+
+  img:hover {
+    filter: opacity(0.9);
+    transform: scale(1.01);
+  }
+}
+
+.lgReactElement {
+    column-count: 3;
+    column-gap: 10px;
 }
