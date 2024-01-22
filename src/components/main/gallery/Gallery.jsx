@@ -35,14 +35,12 @@ const Gallery = () => {
               showCloseIcon: true,
               download: true,
             }}
-            // plugins={[
-            //   lgThumbnail,
-            //   lgZoom,
-            //   lgAutoplay,
-            //   lgFullscreen,
-            //   lgRotate,
-            //   lgShare,
-            // ]}
+            plugins={[
+              lgThumbnail,
+              lgZoom,
+              lgAutoplay,
+              lgShare,
+            ]}
           >
             {images.slice(0, 10).map((image, index) => {
               return (
