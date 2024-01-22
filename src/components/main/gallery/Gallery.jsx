@@ -49,12 +49,7 @@ const Gallery = () => {
                   key={index}
                   className={styles.imageGridItem}
                 >
-                  <img
-                    alt={image.alt}
-                    src={image.src}
-                    width={200}
-                    height={200}
-                  />
+                  <img alt={image.alt} src={image.src} />
                 </a>
               );
             })}
