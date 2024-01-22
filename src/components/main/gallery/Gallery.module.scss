@@ -60,7 +60,10 @@
   }
 
   @include tablet {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    .imageGridItem:nth-child(5n) {
+      grid-column-end: span 2;
+    }
   }
 
   @include desktop {
@@ -85,5 +88,9 @@
   background: $buttonBG;
   &:hover {
     border: 1px solid $textPurple;
+  }
+
+  @include mobile {
+    width: 100%;
   }
 }
