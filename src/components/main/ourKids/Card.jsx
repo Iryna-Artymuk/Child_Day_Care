@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ReactCardFlip from 'react-card-flip';
 
 import styles from './OurKids.module.scss';
+import clsx from 'clsx';
 const CardStyle = {
   borderRadius: '12px',
   border: '4px solid #FFC909',
@@ -18,7 +19,8 @@ const Card = ({ childInfo }) => {
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
       <div
         style={CardStyle}
-        className={styles.cardFront}
+        // className={styles.cardFront}
+        className={clsx(styles.cardFront, isFlipped && styles.flipped)}
         onClick={() => setIsFlipped(!isFlipped)}
       >
         <img
