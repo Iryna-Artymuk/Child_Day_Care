@@ -64,6 +64,10 @@
     border-radius: 8px;
   }
 }
+
+.cardFront.flipped {
+  display: none;
+}
 .cardBack {
   background: #fff;
   width: 100%;
