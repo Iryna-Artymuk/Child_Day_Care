@@ -32,8 +32,26 @@ const Schedule = () => {
               {schedule.map((day, index) => (
                 <div key={index} className={styles.scheduleCard}>
                   <h3>{day.day} </h3>
-                  <p>{day.time} </p>
-                  <p>{day.event} </p>
+                  <ul className={styles.scheduleList}>
+                    <li className={styles.scheduleListItem}>
+                      <svg width={20} height={20}>
+                        <use href={`${sprite}#${'icon-clock'}`} />
+                      </svg>
+                      <p>{day.time}</p>
+                    </li>
+                    <li className={styles.scheduleListItem}>
+                      <svg width={20} height={20}>
+                        <use href={`${sprite}#${'icon-books'}`} />
+                      </svg>
+                      <p>{day.event1} </p>
+                    </li>
+                    <li className={styles.scheduleListItem}>
+                      <svg width={20} height={20}>
+                        <use href={`${sprite}#${'icon-books'}`} />
+                      </svg>
+                      <p>{day.event2} </p>
+                    </li>
+                  </ul>
                 </div>
               ))}
             </div>

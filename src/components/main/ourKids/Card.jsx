@@ -19,8 +19,7 @@ const Card = ({ childInfo }) => {
     <ReactCardFlip isFlipped={isFlipped} flipDirection="horizontal">
       <div
         style={CardStyle}
-        // className={styles.cardFront}
-        className={clsx(styles.cardFront, isFlipped && styles.flipped)}
+        className={styles.cardFront}
         onClick={() => setIsFlipped(!isFlipped)}
       >
         <img
@@ -32,7 +31,9 @@ const Card = ({ childInfo }) => {
         <div className={styles.info}>
           <p className={styles.name}>{childInfo.name}</p>
           <p>{childInfo.DOB}</p>
-          <p className={styles.hobby}>{childInfo.hobby}</p>
+          <p className={clsx(styles.hobby, isFlipped && styles.flipped)}>
+            {childInfo.hobby}
+          </p>
         </div>
       </div>
 
