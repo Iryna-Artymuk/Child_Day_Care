@@ -64,7 +64,7 @@ const Navigation = ({ toggleBurgerMenu }) => {
                 block: 'start',
               })
             }
-            to="/#weStudy"
+            to="/#study"
           >
             Ми вивчаємо
           </HashLink>
