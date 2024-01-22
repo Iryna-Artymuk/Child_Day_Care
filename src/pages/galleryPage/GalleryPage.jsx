@@ -16,9 +16,10 @@ import lgZoom from 'lightgallery/plugins/zoom';
 import lgAutoplay from 'lightgallery/plugins/autoplay';
 import lgShare from 'lightgallery/plugins/share';
 import Container from '@/components/Container/Container';
+import styles from './GalleryPage.module.scss';
 const GalleryPage = () => {
   return (
-    <section>
+    <section className={styles.gallery}>
       <Container>
         <LightGallery
           elementClassNames={styles.imageGrid}

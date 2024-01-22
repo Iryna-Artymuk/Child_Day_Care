@@ -1,6 +1,7 @@
 import Container from '@/components/Container/Container';
 import styles from './Schedule.module.scss';
 import { schedule } from '@/constants/data/schedule';
+import sprite from '@/assets/icons/sprite.svg';
 const Schedule = () => {
   return (
     <section id="schedule" className={styles.schedule}>
@@ -20,6 +21,12 @@ const Schedule = () => {
       <Container>
         <div className="contentWrapper">
           <div className={styles.innerWrapper}>
+            <svg className={styles.icon1} width={50} height={50}>
+              <use href={`${sprite}#${'icon-book'}`} />
+            </svg>
+            <svg className={styles.icon2} width={50} height={50}>
+              <use href={`${sprite}#${'icon-pen'}`} />
+            </svg>
             <h2 className="title">Наш розклад</h2>
             <div className={styles.schedule}>
               {schedule.map((day, index) => (
