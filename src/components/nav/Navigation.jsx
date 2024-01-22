@@ -32,7 +32,7 @@ const Navigation = ({ toggleBurgerMenu }) => {
             scroll={el =>
               el.scrollIntoView({
                 behavior: 'smooth',
-                block: 'end',
+                block: 'start',
               })
             }
             to="/#gallery"
@@ -46,7 +46,7 @@ const Navigation = ({ toggleBurgerMenu }) => {
             scroll={el =>
               el.scrollIntoView({
                 behavior: 'smooth',
-                block: 'end',
+                block: 'start',
               })
             }
             to="/#schedule"
@@ -61,7 +61,7 @@ const Navigation = ({ toggleBurgerMenu }) => {
             scroll={el =>
               el.scrollIntoView({
                 behavior: 'smooth',
-                block: 'end',
+                block: 'start',
               })
             }
             to="/#weStudy"
@@ -75,7 +75,7 @@ const Navigation = ({ toggleBurgerMenu }) => {
             scroll={el =>
               el.scrollIntoView({
                 behavior: 'smooth',
-                block: 'end',
+                block: 'start',
               })
             }
             to="/#ourTeachers"

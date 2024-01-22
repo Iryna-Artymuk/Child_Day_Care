@@ -22,11 +22,11 @@
     fill: #ffffff;
   }
 }
-
 .imageGrid {
   width: 100%;
   display: grid;
   grid-gap: 10px;
+
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-auto-rows: minmax(50px, auto);
 
@@ -39,9 +39,6 @@
       height: 100%;
       object-fit: cover;
       border-radius: 8px;
-      &:hover {
-        transform: scale(1.05);
-      }
     }
   }
 
@@ -50,9 +47,26 @@
   }
 
   @include tablet {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
   @include desktop {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+.link {
+  display: flex;
+  align-self: flex-end;
+  width: 275px;
+  height: 50px;
+  // padding: 7px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  gap: 10px;
+  font-family: 'ComicBold';
+  color: $textPurple;
+  background: $buttonBG;
+  &:hover {
+    border: 1px solid $textPurple;
   }
 }

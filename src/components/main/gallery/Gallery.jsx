@@ -19,10 +19,8 @@ import lgRotate from 'lightgallery/plugins/rotate';
 import Container from '@/components/Container/Container';
 import styles from './Gallery.module.scss';
 import { images } from '@/constants/data/gallery';
+import { Link } from 'react-router-dom';
 const Gallery = () => {
-  const onInit = () => {
-    console.log('lightGallery has been initialized');
-  };
   return (
     <section id="gallery" className={styles.gallery}>
       <Container>
@@ -31,8 +29,12 @@ const Gallery = () => {
 
           <LightGallery
             elementClassNames={styles.imageGrid}
-            onInit={onInit}
             speed={500}
+            mobileSettings={{
+              controls: true,
+              showCloseIcon: true,
+              download: true,
+            }}
             // plugins={[
             //   lgThumbnail,
             //   lgZoom,
@@ -42,18 +44,26 @@ const Gallery = () => {
             //   lgShare,
             // ]}
           >
-            {images.map((image, index) => {
+            {images.slice(0, 10).map((image, index) => {
               return (
                 <a
                   href={image.src}
                   key={index}
                   className={styles.imageGridItem}
                 >
-                  <img alt={image.alt} src={image.src} />
+                  <img
+                    alt={image.alt}
+                    src={image.src}
+                    width={200}
+                    height={200}
+                  />
                 </a>
               );
             })}
           </LightGallery>
+          <Link className={styles.link} to="gallery">
+            Дивитись всі фото{' '}
+          </Link>
         </div>
       </Container>
     </section>

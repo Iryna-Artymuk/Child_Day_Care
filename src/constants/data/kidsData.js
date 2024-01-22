@@ -3,7 +3,7 @@ export const kidsData = [
     name: 'Артимук Аміра',
     DOB: '06 травня 2020',
     hobby:
-      'Улюблений мультфільм "Paw Patrol", вивчає англійську мову, намагається плавати скрізь де є вода, з задоволенням  допомагає в усіх хатніх справах xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
+      'Улюблений мультфільм "Paw Patrol", вивчає англійську мову, намагається плавати скрізь де є вода, з задоволенням  допомагає в усіх хатніх справах',
     photoFront: 'images/kidsPhoto/AmiraArtymukFront.webp',
     photoBack: 'images/kidsPhoto/AmiraArtymukBack.webp',
     sex: 'дівчинка',
