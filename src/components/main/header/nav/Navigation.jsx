@@ -78,7 +78,7 @@ const Navigation = ({ toggleBurgerMenu }) => {
                 block: 'start',
               })
             }
-            to="/#ourTeachers"
+            to="/#teachers"
           >
             Наші вихователі
           </HashLink>
