@@ -9,7 +9,7 @@ const OurKids = () => {
   return (
     <section id="ourKids" className={styles.ourKids}>
       <Container>
-        <div className={styles.contentWrapper}>
+        <div className='contentWrapper'>
           <h2 className="title">Наші діти</h2>
           <ul className={styles.kidsList}>
             {kidsData.map(child => {

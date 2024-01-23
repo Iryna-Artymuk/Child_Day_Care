@@ -1,21 +1,9 @@
 .ourKids {
   width: 100%;
   background: linear-gradient(180deg, #fff 0%, #fff0e5 100%);
-    scroll-margin: 130px;
+  scroll-margin: 130px;
 }
-.contentWrapper {
-  outline: 2px solid blue;
-  @extend%aligncenter;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px 0;
-  @include tablet {
-    padding: 40px 0;
-  }
-  @include desktop {
-    padding: 60px 0;
-  }
-}
+
 .kidsList {
   width: 100%;
   @extend%aligncenter;
