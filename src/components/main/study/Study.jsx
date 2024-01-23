@@ -42,6 +42,7 @@ const Study = () => {
               navigation={{
                 prevEl: '.prevSlide',
                 nextEl: '.nextSlide',
+                clickable: true,
               }}
               className={styles.swiper}
               onSwiper={swiper => {
