@@ -1,0 +1,19 @@
+.footer {
+  width: 100%;
+
+  background: $footerBG;
+}
+.footer_contentWrapper {
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+  padding: 30px 0;
+}
+.address {
+  font-family: 'Comic';
+  font-style: normal;
+  font-size: 24px;
+  color: $textWhite;
+  p {
+    font-size: 14px;
+  }
+}

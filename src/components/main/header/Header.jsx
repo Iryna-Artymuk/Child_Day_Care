@@ -41,7 +41,7 @@ const Header = () => {
           />
         </div>
       </Container>
-      {/* <img src={header_bottom} alt="" /> */}
+   
     </header>
   );
 };
