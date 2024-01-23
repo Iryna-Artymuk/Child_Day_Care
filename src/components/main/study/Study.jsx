@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { useEffect, useRef, useState } from 'react';
 import Markdown from 'react-markdown';
-import { EffectCoverflow } from 'swiper/modules';
+import { EffectCoverflow, Navigation } from 'swiper/modules';
 import Container from '@/components/ui/Container/Container';
 import Card from './card/Card';
 import 'swiper/css';
@@ -39,6 +39,10 @@ const Study = () => {
           <h2 className="title"> Ми вивчаємо</h2>
           <div className={styles.swiperWrapper}>
             <Swiper
+              navigation={{
+                prevEl: '.prevSlide',
+                nextEl: '.nextSlide',
+              }}
               className={styles.swiper}
               onSwiper={swiper => {
                 swiperRef.current = swiper;
@@ -52,7 +56,7 @@ const Study = () => {
                 modifier: 1,
                 slideShadows: true,
               }}
-              modules={[EffectCoverflow]}
+              modules={[EffectCoverflow, Navigation]}
               loop={true}
             >
               {posts?.map((post, index) => (
@@ -63,10 +67,37 @@ const Study = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <SwiperButtons
-              onPrevClick={() => swiperRef.current.slidePrev()}
+            <button
+              className={styles.prevSlide}
+              onClick={() => swiperRef.current.slidePrev()}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 320 512"
+              >
+                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+              </svg>
+            </button>
+            <button
+              className={styles.nextSlide}
+              onClick={() => swiperRef.current.slideNext()}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="1em"
+                viewBox="0 0 320 512"
+              >
+                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+              </svg>
+            </button>
+            {/* <SwiperButtons
+              onPrevClick={() => {
+                console.log('click');
+                swiperRef.current.slidePrev();
+              }}
               onNextClick={() => swiperRef.current.slideNext()}
-            />
+            /> */}
           </div>
         </div>
       </Container>
