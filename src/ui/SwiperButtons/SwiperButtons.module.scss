@@ -1,0 +1,31 @@
+.prevSlide,
+.nextSlide {
+  position: absolute;
+  top: 55%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: $swiperButtonsBG;
+    transition: all linear 0.25s;
+  }
+  @include tablet {
+    padding: 0.5rem;
+  }
+}
+.prevSlide {
+  transform: translateY(-150%);
+  left: -20px;
+}
+.nextSlide {
+  transform: rotate(180deg) translateY(150%);
+  right: -20px;
+}
+.prevSlide:hover svg,
+.nextSlide:hover svg {
+  fill: $swiperButtonsBGHover;
+}

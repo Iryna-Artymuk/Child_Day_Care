@@ -1,8 +1,8 @@
 .study {
   position: relative;
   width: 100%;
-  min-height: 300px;
   background: $studyBG;
+  scroll-margin: 130px;
   &::before {
     content: ' ';
     width: 100%;
@@ -41,6 +41,29 @@
     }
     &::after {
       bottom: -20px;
+    }
+  }
+}
+// swiper
+.swiperWrapper {
+  width: 90%;
+  position: relative;
+
+  .swiper {
+    width: 100%;
+    height: 300px;
+    .slide {
+      height: 300px;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      @include tablet {
+        width: 33.33% !important;
+      }
+      @include desktop {
+        width: 33.33% !important;
+      }
     }
   }
 }

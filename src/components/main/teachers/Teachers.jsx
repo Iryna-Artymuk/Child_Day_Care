@@ -14,13 +14,13 @@ const Teachers = () => {
               <li className={styles.teachersListItem}>
                 <div className={styles.info}>
                   <img src={img1} alt="" />
-                  <p>Келеберда Світлана Миколаївна</p>
+                  <p>Світлана Миколаївна</p>
                 </div>
               </li>
               <li className={styles.teachersListItem}>
                 <div className={styles.info}>
                   <img src={img2} alt="" />
-                  <p>Чурута Ірина Григорівна </p>
+                  <p>Ірина Григорівна </p>
                 </div>
               </li>
               <li className={styles.teachersListItem}>
