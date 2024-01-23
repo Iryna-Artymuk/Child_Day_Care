@@ -1,5 +1,4 @@
-
-import Container from '@/components/Container/Container';
+import Container from '@/components/ui/Container/Container';
 
 import styles from './OurKids.module.scss';
 
@@ -7,7 +6,6 @@ import { kidsData } from '@/constants/data/kidsData';
 
 import Card from './Card';
 const OurKids = () => {
-
   return (
     <section id="ourKids" className={styles.ourKids}>
       <Container>

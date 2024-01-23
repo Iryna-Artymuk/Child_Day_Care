@@ -1,12 +1,12 @@
-import Container from '@/components/Container/Container';
+import Container from '@/components/ui/Container/Container';
 
 import { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
 
-import Logo from '@/components/logo/Logo';
+import Logo from '@/components/ui/logo/Logo';
 import Navigation from '@/components/main/header/nav/Navigation';
 
-import BurgerMenu from '@/components/burgerMenu/BurgerMenu';
+import BurgerMenu from '@/components/main/burgerMenu/BurgerMenu';
 
 import styles from './Header.module.scss';
 
@@ -41,7 +41,6 @@ const Header = () => {
           />
         </div>
       </Container>
-   
     </header>
   );
 };

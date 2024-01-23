@@ -1,4 +1,4 @@
-import Container from '@/components/Container/Container';
+import Container from '@/components/ui/Container/Container';
 import styles from './Teachers.module.scss';
 import img1 from '@/assets/images/teachers/img1.png';
 import img2 from '@/assets/images/teachers/img2.png';

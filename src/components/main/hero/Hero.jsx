@@ -1,6 +1,5 @@
-import Container from '../../Container/Container';
+import Container from '../../ui/Container/Container';
 import styles from './Hero.module.scss';
-
 
 import bear2_hero from '@/assets/images/hero/bear2_hero.png';
 import paw_patrol from '@/assets/images/hero/paw_patrol.png';

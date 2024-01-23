@@ -15,7 +15,7 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 import lgAutoplay from 'lightgallery/plugins/autoplay';
 import lgShare from 'lightgallery/plugins/share';
-import Container from '@/components/Container/Container';
+import Container from '@/components/ui/Container/Container';
 import styles from './GalleryPage.module.scss';
 const GalleryPage = () => {
   return (

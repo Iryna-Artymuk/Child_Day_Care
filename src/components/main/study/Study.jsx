@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { useEffect, useRef, useState } from 'react';
 import Markdown from 'react-markdown';
 import { EffectCoverflow } from 'swiper/modules';
-import Container from '@/components/Container/Container';
+import Container from '@/components/ui/Container/Container';
 import Card from './card/Card';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -14,7 +14,7 @@ import styles from './Study.module.scss';
 import markdown1 from '@/constants/markdown/markdown1.md';
 import markdown2 from '@/constants/markdown/markdown2.md';
 import markdown3 from '@/constants/markdown/markdown3.md';
-import SwiperButtons from '@/ui/SwiperButtons/SwiperButtons';
+import SwiperButtons from '@/components/ui/SwiperButtons/SwiperButtons';
 
 const Study = () => {
   const swiperRef = useRef();

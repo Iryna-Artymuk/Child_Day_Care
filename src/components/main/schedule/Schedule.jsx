@@ -1,4 +1,4 @@
-import Container from '@/components/Container/Container';
+import Container from '@/components/ui/Container/Container';
 import styles from './Schedule.module.scss';
 import { schedule } from '@/constants/data/schedule';
 import sprite from '@/assets/icons/sprite.svg';
