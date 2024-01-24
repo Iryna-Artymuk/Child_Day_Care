@@ -36,7 +36,6 @@ const Gallery = () => {
             elementClassNames={styles.imageGrid}
             speed={500}
             mobileSettings={{
-              controls: true,
               showCloseIcon: true,
               download: true,
             }}

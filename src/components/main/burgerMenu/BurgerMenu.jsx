@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 import styles from './BurgerMenu.module.scss';
-import Navigation from '../../ui/nav/Navigation';
+import Navigation from '../header/nav/Navigation';
 
 const BurgerMenu = ({ toggleBurgerMenu, showBurgerMenu }) => {
   return (

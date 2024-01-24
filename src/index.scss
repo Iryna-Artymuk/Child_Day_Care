@@ -17,18 +17,14 @@
 }
 
 body {
-  min-height: 100vh;
   min-width: 320px;
-  max-width: 100%;
+  max-width: 1240px;
   font-family: 'Comic';
-
   font-size: 18px;
-
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 main {
-  min-height: 100vh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -42,7 +38,7 @@ main {
 
 header,
 footer {
-  width: 100vw;
+  width: 99vw;
 }
 
 h1,
@@ -93,27 +89,27 @@ textarea {
   outline: none;
 }
 
-::-webkit-scrollbar {
-  width: 0.8rem;
-}
-::-webkit-scrollbar-track {
-  background-color: $scroll;
-  border-radius: 8px;
-  margin-bottom: 0.5rem;
-}
-::-webkit-scrollbar-thumb {
-  background-color: $scrollBG;
-  border-radius: 0.3rem;
-  border: 1px solid $scrollBG;
-  height: 0.5rem;
-  cursor: pointer;
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: $scrollBGHover;
-  border: 1px solid $scrollBGHover;
-  cursor: pointer;
-}
+// ::-webkit-scrollbar {
+//   width: 0.8rem;
+// }
+// ::-webkit-scrollbar-track {
+//   background-color: $scroll;
+//   border-radius: 8px;
+//   margin-bottom: 0.5rem;
+// }
+// ::-webkit-scrollbar-thumb {
+//   background-color: $scrollBG;
+//   border-radius: 0.3rem;
+//   border: 1px solid $scrollBG;
+//   height: 0.5rem;
+//   cursor: pointer;
+// }
+// ::-webkit-scrollbar-thumb:hover {
+//   background-color: $scrollBGHover;
+//   border: 1px solid $scrollBGHover;
+//   cursor: pointer;
+// }
 
-.swiper-slide-shadow-coverflow {
-  border-radius: 20px;
-}
+// .swiper-slide-shadow-coverflow {
+//   border-radius: 20px;
+// }

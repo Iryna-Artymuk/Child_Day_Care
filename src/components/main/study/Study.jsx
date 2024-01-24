@@ -37,69 +37,73 @@ const Study = () => {
       <Container>
         <div className="contentWrapper">
           <h2 className="title"> Ми вивчаємо</h2>
-          <div className={styles.swiperWrapper}>
-            <Swiper
-              navigation={{
-                prevEl: '.prevSlide',
-                nextEl: '.nextSlide',
-                clickable: true,
-              }}
-              className={styles.swiper}
-              onSwiper={swiper => {
-                swiperRef.current = swiper;
-              }}
-              effect={'coverflow'}
-              slidesPerView={'auto'}
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              modules={[EffectCoverflow, Navigation]}
-              loop={true}
-            >
-              {posts?.map((post, index) => (
-                <SwiperSlide key={index} className={styles.slide}>
-                  <Card>
-                    <Markdown>{post}</Markdown>
-                  </Card>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <button
-              className={styles.prevSlide}
-              onClick={() => swiperRef.current.slidePrev()}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 320 512"
+          {posts.length > 0 ? (
+            <div className={styles.swiperWrapper}>
+              <Swiper
+                navigation={{
+                  prevEl: '.prevSlide',
+                  nextEl: '.nextSlide',
+                  clickable: true,
+                }}
+                className={styles.swiper}
+                onSwiper={swiper => {
+                  swiperRef.current = swiper;
+                }}
+                effect={'coverflow'}
+                slidesPerView={'auto'}
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                }}
+                modules={[EffectCoverflow, Navigation]}
+                loop={true}
               >
-                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
-              </svg>
-            </button>
-            <button
-              className={styles.nextSlide}
-              onClick={() => swiperRef.current.slideNext()}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="1em"
-                viewBox="0 0 320 512"
+                {posts?.map((post, index) => (
+                  <SwiperSlide key={index} className={styles.slide}>
+                    <Card>
+                      <Markdown>{post}</Markdown>
+                    </Card>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <button
+                className={styles.prevSlide}
+                onClick={() => swiperRef.current.slidePrev()}
               >
-                <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
-              </svg>
-            </button>
-            {/* <SwiperButtons
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 320 512"
+                >
+                  <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+                </svg>
+              </button>
+              <button
+                className={styles.nextSlide}
+                onClick={() => swiperRef.current.slideNext()}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="1em"
+                  viewBox="0 0 320 512"
+                >
+                  <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+                </svg>
+              </button>
+              {/* <SwiperButtons
               onPrevClick={() => {
                 console.log('click');
                 swiperRef.current.slidePrev();
               }}
               onNextClick={() => swiperRef.current.slideNext()}
             /> */}
-          </div>
+            </div>
+          ) : (
+            <p>Завантаженн...</p>
+          )}
         </div>
       </Container>
     </section>

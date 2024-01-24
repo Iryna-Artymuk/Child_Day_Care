@@ -2,7 +2,7 @@ import Container from '@/components/ui/Container/Container';
 import Logo from '@/components/ui/logo/Logo';
 
 import styles from './Footer.module.scss';
-import Navigation from '../../ui/nav/Navigation';
+import Navigation from '../header/nav/Navigation';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
