@@ -41,17 +41,20 @@ const Gallery = () => {
             }}
             plugins={[lgThumbnail, lgZoom, lgAutoplay, lgShare]}
           >
-            {images.slice(0, 10).map((image, index) => {
-              return (
-                <a
-                  href={image.src}
-                  key={index}
-                  className={styles.imageGridItem}
-                >
-                  <img alt={image.alt} src={image.src} loading="lazy" />
-                </a>
-              );
-            })}
+            {images
+              .reverse()
+              .slice(0, 10)
+              .map((image, index) => {
+                return (
+                  <a
+                    href={image.src}
+                    key={index}
+                    className={styles.imageGridItem}
+                  >
+                    <img alt={image.alt} src={image.src} loading="lazy" />
+                  </a>
+                );
+              })}
           </LightGallery>
           <Link className={styles.link} to="/gallery">
             Дивитись всі фото
