@@ -36,7 +36,7 @@
   }
 
   @include desktop {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     .imageGridItem:nth-child(3n) {
       grid-column-end: span 2;
     }
