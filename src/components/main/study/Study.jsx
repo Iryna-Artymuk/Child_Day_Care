@@ -15,12 +15,12 @@ import markdown1 from '@/constants/markdown/markdown1.md';
 import markdown2 from '@/constants/markdown/markdown2.md';
 import markdown3 from '@/constants/markdown/markdown3.md';
 import markdown4 from '@/constants/markdown/markdown4.md';
+
 import SwiperButtons from '@/components/ui/SwiperButtons/SwiperButtons';
 
 const Study = () => {
   const swiperRef = useRef();
   const [posts, setPost] = useState([]);
-  console.log('posts: ', posts);
 
   useEffect(() => {
     const filesArr = [markdown1, markdown2, markdown3, markdown4];
