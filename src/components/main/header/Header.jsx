@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Logo from '@/components/ui/logo/Logo';
 import Navigation from '@/components/main/header/nav/Navigation';
 
-import BurgerMenu from '@/components/main/burgerMenu/BurgerMenu';
+import BurgerMenu from '@/components/burgerMenu/BurgerMenu';
 
 import styles from './Header.module.scss';
 
