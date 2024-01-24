@@ -14,14 +14,16 @@ import styles from './Study.module.scss';
 import markdown1 from '@/constants/markdown/markdown1.md';
 import markdown2 from '@/constants/markdown/markdown2.md';
 import markdown3 from '@/constants/markdown/markdown3.md';
+import markdown4 from '@/constants/markdown/markdown4.md';
 import SwiperButtons from '@/components/ui/SwiperButtons/SwiperButtons';
 
 const Study = () => {
   const swiperRef = useRef();
   const [posts, setPost] = useState([]);
+  console.log('posts: ', posts);
 
   useEffect(() => {
-    const filesArr = [markdown1, markdown2, markdown3];
+    const filesArr = [markdown1, markdown2, markdown3, markdown4];
     filesArr.forEach(file =>
       fetch(file)
         .then(response => {
@@ -37,14 +39,9 @@ const Study = () => {
       <Container>
         <div className="contentWrapper">
           <h2 className="title"> Ми вивчаємо</h2>
-          {posts.length > 0 ? (
+          {posts?.length > 0 ? (
             <div className={styles.swiperWrapper}>
               <Swiper
-                navigation={{
-                  prevEl: '.prevSlide',
-                  nextEl: '.nextSlide',
-                  clickable: true,
-                }}
                 className={styles.swiper}
                 onSwiper={swiper => {
                   swiperRef.current = swiper;
@@ -69,37 +66,11 @@ const Study = () => {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <button
-                className={styles.prevSlide}
-                onClick={() => swiperRef.current.slidePrev()}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 320 512"
-                >
-                  <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
-                </svg>
-              </button>
-              <button
-                className={styles.nextSlide}
-                onClick={() => swiperRef.current.slideNext()}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1em"
-                  viewBox="0 0 320 512"
-                >
-                  <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
-                </svg>
-              </button>
-              {/* <SwiperButtons
-              onPrevClick={() => {
-                console.log('click');
-                swiperRef.current.slidePrev();
-              }}
-              onNextClick={() => swiperRef.current.slideNext()}
-            /> */}
+
+              <SwiperButtons
+                onPrevClick={() => swiperRef.current.slidePrev()}
+                onNextClick={() => swiperRef.current.slideNext()}
+              />
             </div>
           ) : (
             <p>Завантаженн...</p>
