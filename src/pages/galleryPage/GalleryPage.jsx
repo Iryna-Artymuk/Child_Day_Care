@@ -43,6 +43,7 @@ const GalleryPage = () => {
                   className={styles.imageGridItem}
                 >
                   <img
+                    loading="lazy"
                     alt={image.alt}
                     src={image.src}
                     width={200}

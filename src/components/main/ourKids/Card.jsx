@@ -24,8 +24,9 @@ const Card = ({ childInfo }) => {
       >
         <img
           src={childInfo.photoFront}
+          loading="lazy"
           width="297px"
-          height="235px"
+          height="250px"
           alt={`${childInfo.name} фото`}
         />
         <div className={styles.info}>
@@ -42,7 +43,11 @@ const Card = ({ childInfo }) => {
         onClick={() => setIsFlipped(!isFlipped)}
         className={styles.cardBack}
       >
-        <img src={childInfo.photoBack} alt={`${childInfo.name} фото`} />
+        <img
+          src={childInfo.photoBack}
+          alt={`${childInfo.name} фото`}
+          loading="lazy"
+        />
       </div>
     </ReactCardFlip>
   );

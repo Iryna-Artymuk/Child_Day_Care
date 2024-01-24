@@ -10,7 +10,7 @@ export const kidsData = [
   },
   {
     name: 'Батир Поліна',
-    DOB: '19 липня 2010',
+    DOB: '7 березня 2020',
     hobby: 'Футбол',
     photoBack: 'images/default/default_girl.webp',
     photoFront: 'images/default/default_girl.webp',
@@ -18,7 +18,7 @@ export const kidsData = [
   },
   {
     name: 'Барабаш Матвій',
-    DOB: '25 жовтня 2011',
+    DOB: '7 березня 2020',
     hobby: 'Малювання',
     photoFront: 'images/default/default_boy.webp',
     photoBack: 'images/default/default_boy.webp',
@@ -26,7 +26,7 @@ export const kidsData = [
   },
   {
     name: 'Білецький Мирон',
-    DOB: '08 грудня 2013',
+    DOB: '7 березня 2020',
     hobby: 'Грає в шахи',
     photoFront: 'images/default/default_boy.webp',
     photoBack: 'images/default/default_boy.webp',
@@ -34,7 +34,7 @@ export const kidsData = [
   },
   {
     name: 'Василенко Аліса',
-    DOB: '15 травня 2011',
+    DOB: '7 березня 2020',
     hobby: 'Плавання',
     photoBack: 'images/default/default_girl.webp',
     photoFront: 'images/default/default_girl.webp',
@@ -42,7 +42,7 @@ export const kidsData = [
   },
   {
     name: 'Гонтар Захар',
-    DOB: '27 вересня 2010',
+    DOB: '7 березня 2020',
     hobby: 'Гра в відеоігри',
     photoFront: 'images/default/default_boy.webp',
     photoBack: 'images/default/default_boy.webp',
@@ -50,7 +50,7 @@ export const kidsData = [
   },
   {
     name: 'Горбенко Ангеліна',
-    DOB: '30 листопада 2011',
+    DOB: '7 березня 2020',
     hobby: 'Танці',
     photoBack: 'images/default/default_girl.webp',
     photoFront: 'images/default/default_girl.webp',
@@ -58,7 +58,7 @@ export const kidsData = [
   },
   {
     name: 'Гришко Артем',
-    DOB: '18 березня 2011',
+    DOB: '7 березня 2020',
     hobby: 'Грає в баскетбол',
     photoFront: 'images/default/default_boy.webp',
     photoBack: 'images/default/default_boy.webp',
@@ -74,7 +74,7 @@ export const kidsData = [
   },
   {
     name: 'Крайова Міла',
-    DOB: '13 вересня 2010',
+    DOB: '7 березня 2020',
     hobby: 'Садіння',
     photoBack: 'images/default/default_girl.webp',
     photoFront: 'images/default/default_girl.webp',
@@ -82,7 +82,7 @@ export const kidsData = [
   },
   {
     name: 'Лавренюк Станіслав',
-    DOB: '25 липня 2011',
+    DOB: '7 березня 2020',
     hobby: 'Грає на скрипці',
     photoFront: 'images/default/default_boy.webp',
     photoBack: 'images/default/default_boy.webp',
@@ -90,7 +90,7 @@ export const kidsData = [
   },
   {
     name: 'Науменко Сергій',
-    DOB: '28 березня 2012',
+    DOB: '7 березня 2020',
     hobby: 'Експерименти',
     photoFront: 'images/default/default_boy.webp',
     photoBack: 'images/default/default_boy.webp',
@@ -98,7 +98,7 @@ export const kidsData = [
   },
   {
     name: 'Панасенко Євгенія',
-    DOB: '14 травня 2010',
+    DOB: '7 березня 2020',
     hobby: 'Кулінарія',
     photoBack: 'images/default/default_girl.webp',
     photoFront: 'images/default/default_girl.webp',
@@ -106,7 +106,7 @@ export const kidsData = [
   },
   {
     name: 'Парамей Міла',
-    DOB: '17 січня 2012',
+    DOB: '7 березня 2020',
     hobby: 'Катання на ковзанах',
     photoBack: 'images/default/default_girl.webp',
     photoFront: 'images/default/default_girl.webp',
@@ -114,7 +114,7 @@ export const kidsData = [
   },
   {
     name: 'Піддубняк Катя',
-    DOB: '27 квітня 2011',
+    DOB: '7 березня 2020',
     hobby: 'Фотографія',
     photoBack: 'images/default/default_girl.webp',
     photoFront: 'images/default/default_girl.webp',
@@ -122,7 +122,7 @@ export const kidsData = [
   },
   {
     name: 'Проценко Богдан',
-    DOB: '08 листопада 2012',
+    DOB: '7 жовтня 2020',
     hobby: 'Садівництво',
     photoFront: 'images/default/default_boy.webp',
     photoBack: 'images/default/default_boy.webp',
@@ -130,7 +130,7 @@ export const kidsData = [
   },
   {
     name: 'Соколенко Олексій',
-    DOB: '15 серпня 2012',
+    DOB: '7 березня 2020',
     hobby: 'Грає на гітарі',
     photoFront: 'images/default/default_boy.webp',
     photoBack: 'images/default/default_boy.webp',
@@ -138,7 +138,7 @@ export const kidsData = [
   },
   {
     name: 'Семикоз Вероніка',
-    DOB: '23 листопада 2010',
+    DOB: '7 березня 2020',
     hobby: 'Живопис',
     photoBack: 'images/default/default_girl.webp',
     photoFront: 'images/default/default_girl.webp',
@@ -146,7 +146,7 @@ export const kidsData = [
   },
   {
     name: 'Ткалич Антон',
-    DOB: '30 вересня 2011',
+    DOB: '7 березня 2020',
     hobby: 'Шахи',
     photoFront: 'images/default/default_boy.webp',
     photoBack: 'images/default/default_boy.webp',
@@ -154,15 +154,15 @@ export const kidsData = [
   },
   {
     name: 'Чорненко Емілія',
-    DOB: '10 грудня 2010',
-    hobby: 'Спів',
-    photoBack: 'images/default/default_girl.webp',
-    photoFront: 'images/default/default_girl.webp',
+    DOB: '7 березня 2020',
+    hobby: 'Полюбляє складати пазли та малювати.',
+    photoBack: 'images/kidsPhoto/ChornenkoEmiliaBack.webp',
+    photoFront: 'images/kidsPhoto/ChornenkoEmiliaFront.webp',
     sex: 'дівчинка',
   },
   {
     name: 'Шадріна Марія',
-    DOB: '28 травня 2011',
+    DOB: '7 березня 2020',
     hobby: 'Пекарство',
     photoBack: 'images/default/default_girl.webp',
     photoFront: 'images/default/default_girl.webp',

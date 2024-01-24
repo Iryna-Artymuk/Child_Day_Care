@@ -48,7 +48,7 @@ const Gallery = () => {
                   key={index}
                   className={styles.imageGridItem}
                 >
-                  <img alt={image.alt} src={image.src} />
+                  <img alt={image.alt} src={image.src} loading="lazy" />
                 </a>
               );
             })}
