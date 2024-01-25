@@ -98,10 +98,10 @@ export const kidsData = [
   },
   {
     name: 'Панасенко Євгенія',
-    DOB: '7 березня 2020',
-    hobby: 'Кулінарія',
-    photoBack: 'images/default/default_girl.webp',
-    photoFront: 'images/default/default_girl.webp',
+    DOB: '12 березня 2020',
+    hobby: 'Любить малювати фарбами, ходити по калюжах і ганяти на самокаті.',
+    photoBack: 'images/kidsPhoto/PanasenkoYevheniiaBack.webp',
+    photoFront: 'images/kidsPhoto/PanasenkoYevheniiaFront.webp',
     sex: 'дівчинка',
   },
   {
