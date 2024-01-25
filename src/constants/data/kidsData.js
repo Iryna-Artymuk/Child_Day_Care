@@ -24,14 +24,7 @@ export const kidsData = [
     photoBack: 'images/default/default_boy.webp',
     sex: 'хлопчик',
   },
-  {
-    name: 'Білецький Мирон',
-    DOB: '7 березня 2020',
-    hobby: 'Грає в шахи',
-    photoFront: 'images/default/default_boy.webp',
-    photoBack: 'images/default/default_boy.webp',
-    sex: 'хлопчик',
-  },
+
   {
     name: 'Василенко Аліса',
     DOB: '7 березня 2020',
@@ -56,14 +49,7 @@ export const kidsData = [
     photoFront: 'images/default/default_girl.webp',
     sex: 'дівчинка',
   },
-  {
-    name: 'Гришко Артем',
-    DOB: '7 березня 2020',
-    hobby: 'Грає в баскетбол',
-    photoFront: 'images/default/default_boy.webp',
-    photoBack: 'images/default/default_boy.webp',
-    sex: 'хлопчик',
-  },
+
   {
     name: 'Івко Богдан',
     DOB: '22 січня 2020',
@@ -83,12 +69,29 @@ export const kidsData = [
     sex: 'дівчинка',
   },
   {
+    name: 'Купчин Марія',
+    DOB: '5 березня 2020',
+    hobby: 'Полюбляє малювати.',
+    photoBack: 'images/default/default_girl.webp',
+    photoFront: 'images/default/default_girl.webp',
+    sex: 'дівчинка',
+  },
+
+  {
     name: 'Лавренюк Станіслав',
-    DOB: '7 березня 2020',
-    hobby: 'Грає на скрипці',
-    photoFront: 'images/default/default_boy.webp',
-    photoBack: 'images/default/default_boy.webp',
+    DOB: '25 серпня 2020',
+    hobby: 'Улюблегий мультфільм "Щенячий патруль"',
+    photoFront: 'images/kidsPhoto/LavreniukStanislavBack.webp',
+    photoBack: 'images/kidsPhoto/LavreniukStanislavBack.webp',
     sex: 'хлопчик',
+  },
+  {
+    name: 'Майсюра Аня',
+    DOB: '7 березня 2020',
+    hobby: 'Катання на ковзанах',
+    photoBack: 'images/default/default_girl.webp',
+    photoFront: 'images/default/default_girl.webp',
+    sex: 'дівчинка',
   },
   {
     name: 'Науменко Сергій',
@@ -130,14 +133,7 @@ export const kidsData = [
     photoBack: 'images/default/default_boy.webp',
     sex: 'хлопчик',
   },
-  {
-    name: 'Соколенко Олексій',
-    DOB: '7 березня 2020',
-    hobby: 'Грає на гітарі',
-    photoFront: 'images/default/default_boy.webp',
-    photoBack: 'images/default/default_boy.webp',
-    sex: 'хлопчик',
-  },
+
   {
     name: 'Семикоз Вероніка',
     DOB: '7 березня 2020',
@@ -161,6 +157,14 @@ export const kidsData = [
     photoBack: 'images/kidsPhoto/ChornenkoEmiliaBack.webp',
     photoFront: 'images/kidsPhoto/ChornenkoEmiliaFront.webp',
     sex: 'дівчинка',
+  },
+  {
+    name: 'Чупрун Даня',
+    DOB: '7 березня 2020',
+    hobby: 'Шахи',
+    photoFront: 'images/default/default_boy.webp',
+    photoBack: 'images/default/default_boy.webp',
+    sex: 'хлопчик',
   },
   {
     name: 'Шадріна Марія',
