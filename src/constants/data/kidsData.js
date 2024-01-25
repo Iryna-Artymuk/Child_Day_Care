@@ -67,15 +67,17 @@ export const kidsData = [
   {
     name: 'Івко Богдан',
     DOB: '22 січня 2020',
-    hobby: 'Читання',
-    photoFront: 'images/default/default_boy.webp',
-    photoBack: 'images/default/default_boy.webp',
+    hobby:
+      'любить танцювати співати,складати пазли,наліпки,також полюбляє займатися творчістю,тільки недовго :) бешкетує,ганяє на самокаті і велобегі',
+    photoFront: 'images/kidsPhoto/IvkoBogdanFront.webp',
+    photoBack: 'images/kidsPhoto/IvkoBogdanBack.webp',
     sex: 'хлопчик',
   },
   {
     name: 'Крайова Міла',
     DOB: '5 березня 2020',
-    hobby: 'Обожнює повітряні кульки, танцювати, лікує всіх хто захворів, допомагає випікати, перевдягаєтися по кілька разів на день і влаштовує концерти:)',
+    hobby:
+      'Обожнює повітряні кульки, танцювати, лікує всіх хто захворів, допомагає випікати, перевдягаєтися по кілька разів на день і влаштовує концерти:)',
     photoBack: 'images/kidsPhoto/KraiovaMilaBack.webp',
     photoFront: 'images/kidsPhoto/KraiovaMilaFront.webp',
     sex: 'дівчинка',
@@ -162,10 +164,10 @@ export const kidsData = [
   },
   {
     name: 'Шадріна Марія',
-    DOB: '7 березня 2020',
-    hobby: 'Пекарство',
-    photoBack: 'images/default/default_girl.webp',
-    photoFront: 'images/default/default_girl.webp',
+    DOB: '6 січня 2020',
+    hobby: 'Полюбляє співати, малювати, допомагати смачно готувати',
+    photoBack: 'images/kidsPhoto/ShadrinaMashaBack.webp',
+    photoFront: 'images/kidsPhoto/ShadrinaMashaFront.webp',
     sex: 'дівчинка',
   },
 ];
