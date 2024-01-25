@@ -74,10 +74,11 @@ export const kidsData = [
   },
   {
     name: 'Крайова Міла',
-    DOB: '7 березня 2020',
-    hobby: 'Садіння',
-    photoBack: 'images/default/default_girl.webp',
-    photoFront: 'images/default/default_girl.webp',
+    DOB: '5 березня 2020',
+    hobby:
+      'Обожнює повітряні кульки, танцювати, лікує всіх хто захворів, допомагає завжди коли я щось випікати, перевдягаєтися по кілька разів на день і влаштовувати концерти:)',
+    photoBack: 'images/kidsPhoto/KraiovaMilaBack.webp',
+    photoFront: 'images/kidsPhoto/KraiovaMilaFront.webp',
     sex: 'дівчинка',
   },
   {
