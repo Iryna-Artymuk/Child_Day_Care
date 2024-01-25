@@ -24,7 +24,6 @@ const Card = ({ childInfo }) => {
       >
         <img
           src={childInfo.photoFront}
-          loading="lazy"
           width="297px"
           height="250px"
           alt={`${childInfo.name} фото`}
