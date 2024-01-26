@@ -22,9 +22,10 @@ const OurKids = () => {
   //   setFilterKidsData(filterKids);
   // }, [searchInputValue]);
   return (
-    <section id="ourKids">
+    <section id="ourKids" className={styles.ourKids}>
       <Container>
         <div className="contentWrapper">
+          <h2 className="title">Наші діти</h2>
           {/* <div className={styles.searchWrapper}>
             <h2 className="title">Наші діти</h2>
             <label>
