@@ -27,6 +27,7 @@ const Card = ({ childInfo }) => {
           width="297px"
           height="250px"
           alt={`${childInfo.name} фото`}
+          loading="lazy"
         />
         <div className={styles.info}>
           <p className={styles.name}>{childInfo.name}</p>

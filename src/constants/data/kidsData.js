@@ -136,10 +136,10 @@ export const kidsData = [
 
   {
     name: 'Семикоз Вероніка',
-    DOB: '7 березня 2020',
-    hobby: 'Живопис',
-    photoBack: 'images/default/default_girl.webp',
-    photoFront: 'images/default/default_girl.webp',
+    DOB: '6 липня 2020',
+    hobby: 'Любить малювати , складати пазли, допомагати мамі та бабусі',
+    photoBack: 'images/kidsPhoto/SemicozVeronicaBack.webp',
+    photoFront: 'images/kidsPhoto/SemicozVeronicaFront.webp',
     sex: 'дівчинка',
   },
   {

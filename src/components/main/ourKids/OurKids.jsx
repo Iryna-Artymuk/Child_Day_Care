@@ -9,23 +9,23 @@ import Card from './Card';
 import sprite from '@/assets/icons/sprite.svg';
 import { useEffect, useState } from 'react';
 const OurKids = () => {
-  const [searchInputValue, setsearchInputValue] = useState('');
+  // const [searchInputValue, setsearchInputValue] = useState('');
 
-  const [filterKidsData, setFilterKidsData] = useState(kidsData);
-  const handelChange = e => {
-    setsearchInputValue(e.target.value.trim());
-  };
-  useEffect(() => {
-    const filterKids = kidsData.filter(kid =>
-      kid.name.toLowerCase().includes(searchInputValue.toLowerCase())
-    );
-    setFilterKidsData(filterKids);
-  }, [searchInputValue]);
+  // const [filterKidsData, setFilterKidsData] = useState(kidsData);
+  // const handelChange = e => {
+  //   setsearchInputValue(e.target.value.trim());
+  // };
+  // useEffect(() => {
+  //   const filterKids = kidsData.filter(kid =>
+  //     kid.name.toLowerCase().includes(searchInputValue.toLowerCase())
+  //   );
+  //   setFilterKidsData(filterKids);
+  // }, [searchInputValue]);
   return (
     <section id="ourKids">
       <Container>
         <div className="contentWrapper">
-          <div className={styles.searchWrapper}>
+          {/* <div className={styles.searchWrapper}>
             <h2 className="title">Наші діти</h2>
             <label>
               <svg className={styles.icon1} width={20} height={20}>
@@ -40,10 +40,10 @@ const OurKids = () => {
                 title="пошук по імені або прізвищу"
               />
             </label>
-          </div>
+          </div> */}
 
           <ul className={styles.kidsList}>
-            {filterKidsData.map(child => {
+            {kidsData.map(child => {
               return (
                 <li key={child.name}>
                   <Card childInfo={child} />
