@@ -27,10 +27,10 @@ export const kidsData = [
 
   {
     name: 'Василенко Аліса',
-    DOB: '7 березня 2020',
-    hobby: 'Плавання',
-    photoBack: 'images/default/default_girl.webp',
-    photoFront: 'images/default/default_girl.webp',
+    DOB: '2 жовтня 2019',
+    hobby: 'Поюбляє малювати, танцювати, співати, і гратися на майданчику ',
+    photoBack: 'images/kidsPhoto/VasylenkoAlisaBack.webp',
+    photoFront: 'images/kidsPhoto/VasylenkoAlisaFront.webp',
     sex: 'дівчинка',
   },
   {
