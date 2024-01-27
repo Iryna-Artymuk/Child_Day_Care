@@ -15,6 +15,7 @@ import markdown1 from '@/constants/markdown/markdown1.md';
 import markdown2 from '@/constants/markdown/markdown2.md';
 import markdown3 from '@/constants/markdown/markdown3.md';
 import markdown4 from '@/constants/markdown/markdown4.md';
+import markdown5 from '@/constants/markdown/markdown5.md';
 
 import SwiperButtons from '@/components/ui/SwiperButtons/SwiperButtons';
 
@@ -23,7 +24,7 @@ const Study = () => {
   const [posts, setPost] = useState([]);
 
   useEffect(() => {
-    const filesArr = [markdown1, markdown2, markdown3, markdown4];
+    const filesArr = [markdown1, markdown2, markdown3, markdown4, markdown5];
     filesArr.forEach(file =>
       fetch(file)
         .then(response => {
