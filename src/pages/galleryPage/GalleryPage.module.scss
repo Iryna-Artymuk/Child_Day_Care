@@ -1,5 +1,7 @@
 .gallery {
+  padding-top: 80px;
   width: 100%;
+  min-height: 100vh;
   background: $galleryBG;
 }
 .imageGrid {
@@ -11,7 +13,7 @@
 
   .imageGridItem {
     display: block;
-
+    background-color: peachpuff;
     img {
       display: flex;
       width: 100%;
