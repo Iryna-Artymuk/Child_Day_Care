@@ -15,6 +15,11 @@
     padding: 0.5rem;
     color: $textWhite;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: 1rem;
+  }
+  button.activeButton {
+    border: 2px solid $activeButtonBorder;
+    scale: 1.1;
+    color: $activeButtonBorder;
   }
 }

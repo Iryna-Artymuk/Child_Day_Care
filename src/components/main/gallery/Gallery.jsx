@@ -1,5 +1,5 @@
+import { gql, useQuery } from '@apollo/client';
 import LightGallery from 'lightgallery/react';
-
 // import styles
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
@@ -16,10 +16,33 @@ import lgAutoplay from 'lightgallery/plugins/autoplay';
 import lgShare from 'lightgallery/plugins/share';
 import Container from '@/components/ui/Container/Container';
 import styles from './Gallery.module.scss';
-import { images } from '@/constants/data/gallery';
+// import { images } from '@/constants/data/gallery';
 import sprite from '@/assets/icons/sprite.svg';
 import { Link } from 'react-router-dom';
+
+const PHOTOS = gql`
+  query getPhotos {
+    photos(pagination: { page: 1, pageSize: 8 }) {
+      data {
+        id
+        attributes {
+          img {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
 const Gallery = () => {
+  const { data, error, loading } = useQuery(PHOTOS);
+
+  const images = data?.photos.data;
+  console.log(' images: ', images);
   return (
     <section id="gallery" className={styles.gallery}>
       <Container>
@@ -32,30 +55,35 @@ const Gallery = () => {
           </svg>
           <h2 className="title">Галерея</h2>
 
-          <LightGallery
-            elementClassNames={styles.imageGrid}
-            speed={500}
-            mobileSettings={{
-              showCloseIcon: true,
-              download: true,
-            }}
-            plugins={[lgThumbnail, lgZoom, lgAutoplay, lgShare]}
-          >
-            {images
-              .reverse()
-              .slice(0, 10)
-              .map((image, index) => {
+          {!loading & !error ? (
+            <LightGallery
+              elementClassNames={styles.imageGrid}
+              speed={500}
+              mobileSettings={{
+                showCloseIcon: true,
+                download: true,
+              }}
+              plugins={[lgThumbnail, lgZoom, lgAutoplay, lgShare]}
+            >
+              {images.map((image, index) => {
                 return (
                   <a
-                    href={image.src}
+                    href={image.attributes.img.data[0].attributes.url}
                     key={index}
                     className={styles.imageGridItem}
                   >
-                    <img alt={image.alt} src={image.src} loading="lazy" />
+                    <img
+                      // alt={image.alt}
+                      src={image.attributes.img.data[0].attributes.url}
+                      loading="lazy"
+                    />
                   </a>
                 );
               })}
-          </LightGallery>
+            </LightGallery>
+          ) : (
+            <p>Завантаження...</p>
+          )}
           <Link className={styles.link} to="/gallery">
             Дивитись всі фото
           </Link>

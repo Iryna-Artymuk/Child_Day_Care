@@ -1,4 +1,5 @@
-import { images } from '@/constants/data/gallery';
+import { gql, useQuery } from '@apollo/client';
+
 import LightGallery from 'lightgallery/react';
 
 // import styles
@@ -18,7 +19,14 @@ import lgShare from 'lightgallery/plugins/share';
 import Container from '@/components/ui/Container/Container';
 import styles from './GalleryPage.module.scss';
 import { useEffect, useState } from 'react';
-import { gql, useQuery } from '@apollo/client';
+
+import { Cloudinary } from '@cloudinary/url-gen';
+
+import {
+  AdvancedImage,
+  lazyload,
+  placeholder,
+} from '@cloudinary/react';
 import GalleryFilters from '@/components/galleryFilters/GalleryFilters';
 
 const PHOTOS = gql`
@@ -34,9 +42,9 @@ const PHOTOS = gql`
               attributes {
                 img {
                   data {
-                    id
                     attributes {
                       url
+                      provider_metadata
                     }
                   }
                 }
@@ -51,7 +59,12 @@ const PHOTOS = gql`
 const GalleryPage = () => {
   const [filterId, setfilterId] = useState('5');
   const [images, setImages] = useState([]);
-
+  // Create a Cloudinary instance and set your cloud name.
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'dfzwtscqb',
+    },
+  });
   const getFilterId = id => {
     setImages([]);
     setfilterId(id);
@@ -59,6 +72,7 @@ const GalleryPage = () => {
   const { data, error, loading } = useQuery(PHOTOS, {
     variables: { id: filterId },
   });
+
   const filterImg = data?.event.data.attributes.photos.data;
 
   useEffect(() => {
@@ -66,15 +80,15 @@ const GalleryPage = () => {
   }, []);
   useEffect(() => {
     setImages(filterImg);
-  }, [filterImg]);
+  }, [filterId, filterImg]);
 
-  if (error) return <p>{error.message}</p>;
   return (
     <section className={styles.gallery}>
       <Container>
         <div className="contentWrapper">
-          <GalleryFilters getFilterId={getFilterId} />
-          {loading ? (
+          <GalleryFilters getFilterId={getFilterId} filterId={filterId} />
+          {error ? <p>{error.message}</p> : null}
+          {loading & !error ? (
             <p>...loading</p>
           ) : (
             <LightGallery
@@ -86,43 +100,34 @@ const GalleryPage = () => {
               }}
               plugins={[lgThumbnail, lgZoom, lgAutoplay, lgShare]}
             >
-              {/* {images.map((image, index) => {
-              return (
-                <a
-                  href={image.src}
-                  key={index}
-                  className={styles.imageGridItem}
-                >
-                  <img
-                    loading="lazy"
-                    alt={image.alt}
-                    src={image.src}
-                    width={200}
-                    height={200}
-                  />
-                </a>
-              );
-            })} */}
               {images?.map((image, index) => {
-                console.log(image.attributes.img.data[0].attributes.url);
                 return (
                   <a
                     href={image.attributes.img.data[0].attributes.url}
                     key={index}
                     className={styles.imageGridItem}
                   >
-                    <img
-                      loading="lazy"
-                      alt={image.alt}
-                      src={image.attributes.img.data[0].attributes.url}
-                      width={200}
-                      height={200}
+                    <AdvancedImage
+                      cldImg={cld.image(
+                        image?.attributes.img.data[0].attributes
+                          .provider_metadata.public_id
+                      )}
+                      plugins={
+                        ([
+                          lazyload({
+                            rootMargin: '10px 20px 10px 30px',
+                            threshold: 0.25,
+                          }),
+                        ],
+                        [placeholder({ mode: 'blur' })])
+                      }
                     />
                   </a>
                 );
               })}
             </LightGallery>
           )}
+          {images?.length === 0 ? <p>дані тимчасові відсутні </p> : ''}
         </div>
       </Container>
     </section>
