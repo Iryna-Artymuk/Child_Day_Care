@@ -35,10 +35,11 @@ export const kidsData = [
   },
   {
     name: 'Гонтар Захар',
-    DOB: '7 березня 2020',
-    hobby: 'Гра в відеоігри',
-    photoFront: 'images/default/default_boy.webp',
-    photoBack: 'images/default/default_boy.webp',
+    DOB: '29 липня 2020',
+    hobby:
+      'Улюблений мультик - Фіксики, полюбляє малювати фарбами, ліпити, складати пазли та слова з букв',
+    photoFront: 'images/kidsPhoto/HontarZaharFront.webp',
+    photoBack: 'images/kidsPhoto/HontarZaharFront.webp',
     sex: 'хлопчик',
   },
   {
