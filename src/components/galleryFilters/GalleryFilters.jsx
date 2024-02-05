@@ -16,6 +16,7 @@ const GalleryFilters = ({ getFilterId, filterId }) => {
     }
   `;
   const { data } = useQuery(EVENTS);
+
   const [isActive, setIsActive] = useState(filterId);
   console.log('isActive: ', isActive);
   return (
@@ -29,7 +30,7 @@ const GalleryFilters = ({ getFilterId, filterId }) => {
           }}
           className={isActive === item.id ? styles.activeButton : ''}
         >
-          {item.attributes.name}
+          {item?.attributes.name}
         </button>
       ))}
     </div>

@@ -1,46 +1,49 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import { useEffect, useRef, useState } from 'react';
 import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { EffectCoverflow, Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
+import { gql, useQuery } from '@apollo/client';
+
 import Container from '@/components/ui/Container/Container';
+import SwiperButtons from '@/components/ui/SwiperButtons/SwiperButtons';
 import Card from './card/Card';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+
 import styles from './Study.module.scss';
-import markdown1 from '@/constants/markdown/markdown1.md';
-import markdown2 from '@/constants/markdown/markdown2.md';
-import markdown3 from '@/constants/markdown/markdown3.md';
-import markdown4 from '@/constants/markdown/markdown4.md';
-import markdown5 from '@/constants/markdown/markdown5.md';
 
-import SwiperButtons from '@/components/ui/SwiperButtons/SwiperButtons';
-
+const STUDY_ITEMS = gql`
+  query getitems {
+    studies(pagination: { page: 1, pageSize: 4 }) {
+      data {
+        id
+        attributes {
+          title
+          body
+        }
+      }
+    }
+  }
+`;
 const Study = () => {
   const swiperRef = useRef();
-  const [posts, setPost] = useState([]);
-
+  const [studyItems, setStudyItems] = useState([]);
+  const { data, error, loading } = useQuery(STUDY_ITEMS);
   useEffect(() => {
-    const filesArr = [markdown1, markdown2, markdown3, markdown4, markdown5];
-    filesArr.forEach(file =>
-      fetch(file)
-        .then(response => {
-          return response.text();
-        })
-        .then(text => {
-          setPost(prev => [...prev, text]);
-        })
-    );
-  }, []);
+    setStudyItems(data?.studies.data);
+  }, [data]);
+
   return (
     <section id="study" className={styles.study}>
       <Container>
         <div className="contentWrapper">
           <h2 className="title"> Ми вивчаємо</h2>
-          {posts?.length > 0 ? (
+          {studyItems?.length > 0 ? (
             <div className={styles.swiperWrapper}>
               <Swiper
                 className={styles.swiper}
@@ -59,10 +62,12 @@ const Study = () => {
                 modules={[EffectCoverflow, Navigation]}
                 loop={true}
               >
-                {posts?.map((post, index) => (
+                {studyItems?.map((item, index) => (
                   <SwiperSlide key={index} className={styles.slide}>
                     <Card>
-                      <Markdown>{post}</Markdown>
+                      <Markdown remarkPlugins={[remarkGfm]}>
+                        {item.attributes.body}
+                      </Markdown>
                     </Card>
                   </SwiperSlide>
                 ))}
@@ -74,8 +79,11 @@ const Study = () => {
               />
             </div>
           ) : (
-            <p>Завантаженн...</p>
+            <p>Завантаження...</p>
           )}
+          <Link className={styles.link} to="/study">
+            Читати все
+          </Link>
         </div>
       </Container>
     </section>

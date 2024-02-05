@@ -22,10 +22,12 @@ body {
   font-family: 'Comic';
   font-size: 18px;
   overflow-x: hidden; /* Hide horizontal scrollbar */
+  // background: $bodyBG;
 }
 
 main {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -111,3 +113,4 @@ textarea {
 .swiper-slide-shadow-coverflow {
   border-radius: 20px;
 }
+

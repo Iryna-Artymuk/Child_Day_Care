@@ -42,7 +42,6 @@ const Gallery = () => {
   const { data, error, loading } = useQuery(PHOTOS);
 
   const images = data?.photos.data;
-  console.log(' images: ', images);
   return (
     <section id="gallery" className={styles.gallery}>
       <Container>
@@ -75,7 +74,6 @@ const Gallery = () => {
                     <img
                       // alt={image.alt}
                       src={image.attributes.img.data[0].attributes.url}
-                      loading="lazy"
                     />
                   </a>
                 );
@@ -84,6 +82,9 @@ const Gallery = () => {
           ) : (
             <p>Завантаження...</p>
           )}
+          {error ? (
+            <p>оЙ,сталась помилка не вдалось завантажити фото </p>
+          ) : null}
           <Link className={styles.link} to="/gallery">
             Дивитись всі фото
           </Link>

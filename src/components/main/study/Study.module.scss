@@ -99,3 +99,25 @@
 .nextSlide:hover svg {
   fill: $swiperButtonsBGHover;
 }
+
+.link {
+  display: flex;
+  align-self: flex-end;
+  width: 275px;
+  height: 50px;
+  // padding: 7px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  gap: 10px;
+  font-family: 'ComicBold';
+  color: $textPurple;
+  background: $buttonBG;
+  &:hover {
+    border: 1px solid $textPurple;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}

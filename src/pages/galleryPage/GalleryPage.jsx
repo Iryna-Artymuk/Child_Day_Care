@@ -22,11 +22,7 @@ import { useEffect, useState } from 'react';
 
 import { Cloudinary } from '@cloudinary/url-gen';
 
-import {
-  AdvancedImage,
-  lazyload,
-  placeholder,
-} from '@cloudinary/react';
+import { AdvancedImage, lazyload, placeholder } from '@cloudinary/react';
 import GalleryFilters from '@/components/galleryFilters/GalleryFilters';
 
 const PHOTOS = gql`
@@ -73,7 +69,7 @@ const GalleryPage = () => {
     variables: { id: filterId },
   });
 
-  const filterImg = data?.event.data.attributes.photos.data;
+  const filterImg = data?.event.data?.attributes.photos.data;
 
   useEffect(() => {
     window.scrollTo(0, 0);
