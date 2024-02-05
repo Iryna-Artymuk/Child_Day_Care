@@ -1,0 +1,25 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $headerBG;
+    padding: 0.5rem;
+    color: $textWhite;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  button.activeButton {
+    border: 2px solid $activeButtonBorder;
+    scale: 1.1;
+    color: $activeButtonBorder;
+  }
+}
