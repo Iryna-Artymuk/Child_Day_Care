@@ -32,7 +32,7 @@ const PHOTOS = gql`
         id
         attributes {
           name
-          photos {
+          photos(pagination: { page: 1, pageSize: 25 }) {
             data {
               id
               attributes {
