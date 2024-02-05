@@ -53,7 +53,7 @@ const PHOTOS = gql`
   }
 `;
 const GalleryPage = () => {
-  const [filterId, setfilterId] = useState('5');
+  const [filterId, setfilterId] = useState('1');
   const [images, setImages] = useState([]);
   // Create a Cloudinary instance and set your cloud name.
   const cld = new Cloudinary({
